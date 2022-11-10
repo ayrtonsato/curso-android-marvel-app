@@ -15,19 +15,18 @@ detekt {
     source = files(inputDirFiles)
     config = files("$rootDir/config/detekt/detekt.yml")
     autoCorrect = true
+}
 
+tasks.named("detekt").configure {
     reports {
-        xml {
-            enabled = true
-            destination = file("$buildDir/reports/detekt/detekt.xml")
-        }
-        html {
-            enabled = true
-            destination = file("$buildDir/reports/detekt/detekt.html")
-        }
-        txt {
-            enabled = true
-            destination = file("$buildDir/reports/detekt/detekt.txt")
-        }
+        // Enable/Disable XML report (default: true)
+        xml.required.set(true)
+        xml.outputLocation.set(file("build/reports/detekt.xml"))
+        // Enable/Disable HTML report (default: true)
+        html.required.set(true)
+        html.outputLocation.set(file("build/reports/detekt.html"))
+        // Enable/Disable TXT report (default: true)
+        txt.required.set(true)
+        txt.outputLocation.set(file("build/reports/detekt.txt"))
     }
 }
