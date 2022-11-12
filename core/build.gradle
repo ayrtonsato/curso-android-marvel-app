@@ -14,7 +14,7 @@ dependencies {
     api(platform("com.squareup.okhttp3:okhttp-bom:4.9.0"))
     api("com.squareup.okhttp3:okhttp")
     api("com.squareup.okhttp3:logging-interceptor")
-    api 'androidx.paging:paging-common-ktx:3.1.1'
+    implementation "androidx.paging:paging-common:$paging_version"
 
     // Retrofit
     def retrofit_version = '2.9.0'
