@@ -118,7 +118,7 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
 
     // Paging3
-    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version"
 
     // Glide
     def glide_version = "4.12.0"
@@ -138,11 +138,11 @@ dependencies {
     testImplementation "androidx.room:room-testing:$room_version"
 
     // Instrumentation tests
-    def espresso_version = '3.5.0'
+    def espresso_version = '3.4.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.4'
     androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
     androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_version"
-    androidTestImplementation 'androidx.test:runner:1.5.1'
+    androidTestImplementation "androidx.test:runner:1.4.0"
     androidTestUtil 'androidx.test:orchestrator:1.4.2'
 
     // Ui testing
