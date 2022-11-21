@@ -10,6 +10,7 @@ import com.nhaarman.mockitokotlin2.whenever
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.count
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.*
@@ -52,7 +53,7 @@ class CharactersViewModelTest {
                 .thenReturn(flowOf(pagingDataCharacters))
             val result = charactersViewModel.charactersPagingData("")
 
-            assertEquals(1, result.count())
+            assertNotNull(result.first())
         }
 
     @ExperimentalCoroutinesApi
