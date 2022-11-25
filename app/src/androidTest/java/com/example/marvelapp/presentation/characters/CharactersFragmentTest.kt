@@ -42,7 +42,6 @@ class CharactersFragmentTest {
     @Test
     fun shouldShowCharacters_whenViewIsCreated() {
         server.enqueue(MockResponse().setBody("characters_p1.json".asJsonString()))
-        // Thread.sleep(500)
 
         onView(
             withId(R.id.recycler_characters)
@@ -58,7 +57,6 @@ class CharactersFragmentTest {
             enqueue(MockResponse().setBody("characters_p1.json".asJsonString()))
             enqueue(MockResponse().setBody("characters_p2.json".asJsonString()))
         }
-        // Thread.sleep(500)
 
         // action
         onView(
