@@ -23,8 +23,7 @@ class CharactersViewHolder(
         imageCharacter.transitionName = character.name
         imageLoader.load(
             imageCharacter,
-            character.imageUrl,
-            R.drawable.ic_img_loading_error
+            character.imageUrl
         )
         itemView.setOnClickListener {
             onItemClick.invoke(character, imageCharacter)
